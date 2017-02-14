@@ -3,6 +3,27 @@
 
 	$(document).ready(function ()
 	{
+		// Remove logo if using mobile device
+		if ($(window).width() <= 700 && responsive == true)
+		{
+			$('span').removeClass('site_logo');
+			$('#site-description p').remove();
+			$('#site-description a').remove();
+		}
+		else
+		{
+			$('a .site_logo').css({
+				'background-image': siteLogo,
+				'background-repeat': 'no-repeat',
+				'background-position': '0% 0%',
+				'background-size': '100%',
+				'max-width': '100%',
+				'height': logoHeight + 'px',
+				'width': logoWidth + 'px',
+				'border-radius': logoCorners,
+			});
+		}
+
 		var headBgColour	= '';
 		var h1Colour		= '';
 		var pColour			= '';
@@ -24,11 +45,20 @@
 		{
 			$('.headerbar').css({
 				'background-color': headerColour,
-				'background-image': '-webkit-linear-gradient(top, ' + headerColour1 + ' 0%, ' + headerColour2 + ' 2px, ' + headerColour + ' 92px, ' + headerColour + ' 100%)',
 				'background-image': 'linear-gradient(to bottom, ' + headerColour1 + ' 0%, ' + headerColour2 + ' 2px, ' + headerColour + ' 92px, ' +  headerColour + ' 100%)',
 				'background-repeat': 'repeat-x',
 			});
 		}
+
+		// Use the Site Logo banner
+		if (useBanner == true)
+		{
+			$('.headerbar').css({
+				'background': 'url("' + siteLogoBanner + '") ' + 'no-repeat',
+				'height': bannerHeight + 'px',
+				'border-radius': borderRadius + 'px'
+			});
+    	}
 
 		// Remove the header bar
 		if (removeHeaderBar == true )
@@ -51,9 +81,11 @@
 			// Don't remove the site name on a mobile device
 			if ($(window).width() > 700 || responsive == false)
 			{
-				$('#site-description h1').css('display', 'none');
+				//$('#site-description h1').css('display', 'none');
+				$('#site-description h1').remove();
 			}
-			$('#site-description p').css('display', 'none');
+			//$('#site-description p').css('display', 'none');
+			$('#site-description p').remove();
     	}
 
 		// Use a different link for the logo than for breadcrumbs
@@ -66,28 +98,6 @@
 		if (siteLogoRemove == true )
 		{
 			$('span').removeClass('site_logo');
-		}
-
-		// Remove logo if using mobile device
-		if ($(window).width() <= 700 && responsive == true)
-		{
-			$('span').removeClass('site_logo');
-			$('#site-description p').css('display', 'none');
-		}
-		else
-		{
-			$('a .site_logo').css({
-				'background-image': siteLogo,
-				'background-repeat': 'no-repeat',
-				'background-position': '0% 0%',
-				'background-size': '100%',
-				'max-width': '100%',
-				'height': logoHeight + 'px',
-				'width': logoWidth + 'px',
-				'-webkit-border-radius': logoCorners,
-				'-moz-border-radius': logoCorners,
-				'border-radius': logoCorners,
-			});
 		}
 
 		// Place the site logo (and text) in the centre
@@ -157,18 +167,6 @@
 				'float': 'right',
 				'margin-top': '5px',
 				'box-shadow': 'none'
-			});
-    	}
-
-		// Use the Site Logo banner
-		if (useBanner == true)
-		{
-			$('.headerbar').css({
-				'background': 'url("' + siteLogoBanner + '") ' + 'no-repeat',
-				'height': bannerHeight + 'px',
-				'-webkit-border-radius': borderRadius + 'px',
-				'-moz-border-radius': borderRadius + 'px',
-				'border-radius': borderRadius + 'px'
 			});
     	}
 
