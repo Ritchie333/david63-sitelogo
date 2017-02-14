@@ -63,6 +63,8 @@ $lang = array_merge($lang, array(
 
 	'REMOVE_HEADER_BAR'					=> 'Remove the header bar',
 	'REMOVE_HEADER_BAR_EXPLAIN'			=> 'Setting this option will prevent the display of the header bar.',
+	'REPEAT_BACKGROUND'					=> 'Repeat background',
+	'REPEAT_BACKGROUND_EXPLAIN'			=> 'Repeat the background image.',
 
 	'SEARCH_OPTIONS'					=> 'Search box options',
 	'SITE_BACKGROUND'					=> 'Site background',

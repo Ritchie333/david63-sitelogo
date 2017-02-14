@@ -192,6 +192,12 @@
 			<dt><label for="site_logo_background_image">{{ lang('SITE_BACKGROUND_IMAGE') }}{{ lang('COLON') }}</label><br /><span>{{ lang('SITE_BACKGROUND_IMAGE_EXPLAIN') }}</span></dt>
 			<dd><input name="site_logo_background_image" type="text" id="site_logo_background_image" value="{{ SITE_BACKGROUND_IMAGE }}" size="40" maxlength="255" validate="string" /></dd>
 		</dl>
+
+		<dl>
+			<dt><label for="site_logo_background_repeat">{{ lang('REPEAT_BACKGROUND') }}{{ lang('COLON') }}</label><br /><span>{{ lang('REPEAT_BACKGROUND_EXPLAIN') }}</span></dt>
+			<dd><label><input type="radio" class="radio" name="site_logo_background_repeat" value="1" id="site_logo_background_repeat" {% if REPEAT_BACKGROUND %} checked="checked"{% endif %}/> {{ lang('YES') }}</label>
+				<label><input type="radio" class="radio" name="site_logo_background_repeat" value="0" {% if not REPEAT_BACKGROUND %} checked="checked"{% endif %} /> {{ lang('NO') }}</label></dd>
+		</dl>
 	</fieldset>
 
 	<fieldset>

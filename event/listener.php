@@ -118,6 +118,7 @@ class listener implements EventSubscriberInterface
 			'OVERRIDE_COLOUR'		=> $this->config['site_logo_override_colour'],
 
 			'REMOVE_HEADER_BAR'		=> $this->config['site_logo_remove_header'],
+			'REPEAT_BACKGROUND'		=> $this->config['site_logo_background_repeat'],
 
 			'SEARCH_BELOW'			=> ((!$this->config['site_search_remove'] && $this->config['site_logo_site_name_below']) || $this->config['site_logo_move_search']) ? true : false,
 			'SITE_DESCRIPTION'		=> $this->config['site_desc'],

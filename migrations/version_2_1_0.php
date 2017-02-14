@@ -22,6 +22,7 @@ class version_2_1_0 extends migration
 		return array(
 			array('config.add', array('site_logo_use_background', 0)),
 			array('config.add', array('site_logo_background_image', 'styles/prosilver/theme/images/bg_header.gif')),
+			array('config.add', array('site_logo_background_repeat', 0)),
 			array('config.add', array('site_logo_banner_height', 100)),
 			array('config.add', array('site_logo_banner_radius', 10)),
 			array('config.add', array('site_logo_banner_url', '')),

@@ -141,6 +141,7 @@ class admin_controller implements admin_interface
 			'OVERRIDE_COLOUR'			=> isset($this->config['site_logo_override_colour']) ? $this->config['site_logo_override_colour'] : '',
 
 			'REMOVE_HEADER_BAR'			=> isset($this->config['site_logo_remove_header']) ? $this->config['site_logo_remove_header'] : '',
+			'REPEAT_BACKGROUND'			=> isset($this->config['site_logo_background_repeat']) ? $this->config['site_logo_background_repeat'] : '',
 
 			'SEARCH_TO_NAVBAR'			=> isset($this->config['site_logo_move_search']) ? $this->config['site_logo_move_search'] : '',
 			'SITE_BACKGROUND_IMAGE'		=> isset($this->config['site_logo_background_image']) ? $this->config['site_logo_background_image'] : '',
@@ -176,6 +177,7 @@ class admin_controller implements admin_interface
 	protected function set_options()
 	{
 		$this->config->set('site_logo_background_image', $this->request->variable('site_logo_background_image', ''));
+		$this->config->set('site_logo_background_repeat', $this->request->variable('site_logo_background_repeat', 0));
 		$this->config->set('site_logo_banner_height', $this->request->variable('site_logo_banner_height', ''));
 		$this->config->set('site_logo_banner_radius', $this->request->variable('site_logo_banner_radius', ''));
 		$this->config->set('site_logo_banner_url', $this->request->variable('site_logo_banner_url', '', true));
