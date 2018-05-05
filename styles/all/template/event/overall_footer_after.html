@@ -2,6 +2,8 @@
 <script>
 	var backgroundImage		= '{{ SITE_LOGO_BACKGROUND | escape('js') }}';
 	var bannerHeight		= '{{ BANNER_HEIGHT | escape('js') }}';
+	var bannerCentre		= '{{ BANNER_CENTRE | escape('js') }}';
+	var bannerRight			= '{{ BANNER_RIGHT | escape('js') }}';
 	var borderRadius		= '{{ BORDER_RADIUS | escape('js') }}';
 	var headerColour		= '{{ HEADER_COLOUR | escape('js') }}';
 	var headerColour1		= '{{ HEADER_COLOUR_1 | escape('js') }}';
@@ -28,4 +30,4 @@
 	var useOverrideColour	= '{{ USE_OVERRIDE_COLOUR | escape('js') }}';
 </script>
 
-{% INCLUDEJS '@david63_sitelogo/site_logo_min.js' %}
+{% INCLUDEJS '@david63_sitelogo/site_logo.js' %}

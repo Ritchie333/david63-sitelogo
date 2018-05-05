@@ -126,6 +126,15 @@ class admin_controller implements admin_interface
 			));
 		}
 
+		foreach ($positions as $value => $label)
+		{
+			$this->template->assign_block_vars('banner_positions', array(
+				'S_CHECKED'	=> ($this->config['site_logo_banner_position'] == $value) ? true : false,
+				'LABEL'		=> $label,
+				'VALUE'		=> $value,
+			));
+		}
+
 		$extended_site_description_data = $this->config_text->get_array(array('site_logo_extended_site_description'));
 
 		$this->template->assign_vars(array(
@@ -180,6 +189,7 @@ class admin_controller implements admin_interface
 		$this->config->set('site_logo_background_repeat', $this->request->variable('site_logo_background_repeat', 0));
 		$this->config->set('site_logo_banner_height', $this->request->variable('site_logo_banner_height', ''));
 		$this->config->set('site_logo_banner_radius', $this->request->variable('site_logo_banner_radius', ''));
+		$this->config->set('site_logo_banner_position', $this->request->variable('site_logo_banner_position', 0));
 		$this->config->set('site_logo_banner_url', $this->request->variable('site_logo_banner_url', '', true));
 		$this->config->set('site_logo_header', $this->request->variable('site_logo_header', 0));
 		$this->config->set('site_logo_header_colour', $this->request->variable('site_logo_header_colour', '#12A3EB'));

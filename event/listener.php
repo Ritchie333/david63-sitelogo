@@ -106,7 +106,9 @@ class listener implements EventSubscriberInterface
 		$this->template->assign_vars(array(
 			'BANNER_HEIGHT'			=> $this->config['site_logo_banner_height'],
 			'BORDER_RADIUS'			=> $this->config['site_logo_banner_radius'],
-
+			'BANNER_LEFT'		=> ($this->config['site_logo_banner_position'] == ext::LOGO_POSITION_LEFT) ? true : false,
+			'BANNER_CENTRE'		=> ($this->config['site_logo_banner_position'] == ext::LOGO_POSITION_CENTER) ? true : false,
+			'BANNER_RIGHT'		=> ($this->config['site_logo_banner_position'] == ext::LOGO_POSITION_RIGHT) ? true : false,
 			'HEADER_COLOUR'			=> $this->config['site_logo_header_colour'],
 			'HEADER_COLOUR_1'		=> $this->get_hex_colour($this->config['site_logo_header_colour'], 1),
 			'HEADER_COLOUR_2'		=> $this->get_hex_colour($this->config['site_logo_header_colour'], 2),

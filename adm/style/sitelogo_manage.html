@@ -198,6 +198,16 @@
 				<input class="textbox" name="site_logo_banner_radius" type="number" id="site_logo_banner_radius" value="{{ BANNER_RADIUS }}" min="0" max="99" /> {{ lang('PIXELS') }}
 			</dd>
 		</dl>
+
+		<dl>
+			<dt><label for="site_logo_banner_position">{{ lang('BANNER_POSITION') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				{% for pos in banner_positions %}
+					<input type="radio" id="site_logo_banner_position{{ pos.VALUE }}" name="site_logo_banner_position" value="{{ pos.VALUE }}" {% if pos.S_CHECKED %} checked="checked"{% endif %} />
+					<label class="set" for="site_logo_banner_position{{ pos.VALUE }}">{{ pos.LABEL }}</label>
+				{% endfor %}
+			</dd>
+		</dl>
 	</fieldset>
 
 	<fieldset>

@@ -42,6 +42,7 @@ $lang = array_merge($lang, array(
 	'BANNER_OPTIONS'					=> 'Banner options',
 	'BANNER_RADIUS'						=> 'Banner radius',
 	'BANNER_RADIUS_EXPLAIN'				=> 'Sets the number of pixels for rounding the banner corners. Setting this to 0 means that the banner will have square corners.',
+	'BANNER_POSITION'					=> 'Banner position',
 
 	'CLICK_TO_SELECT'					=> 'Click in the box to select a colour',
 

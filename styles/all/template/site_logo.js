@@ -58,7 +58,19 @@
 				'height': bannerHeight + 'px',
 				'border-radius': borderRadius + 'px'
 			});
-    	}
+			if( bannerCentre == true )
+			{
+				$('.headerbar').css({
+					'background-position': 'center'
+				});
+			}
+			if( bannerRight == true )
+			{
+				$('.headerbar').css({
+					'background-position': 'right'
+				});
+			}
+    		}
 
 		// Remove the header bar
 		if (removeHeaderBar == true )
